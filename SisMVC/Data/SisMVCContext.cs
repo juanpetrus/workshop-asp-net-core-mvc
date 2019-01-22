@@ -13,6 +13,8 @@ namespace SisMVC.Models
         {
         }
 
-        public DbSet<SisMVC.Models.Department> Department { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public DbSet<SisRecord> SisRecord { get; set; }
     }
 }
