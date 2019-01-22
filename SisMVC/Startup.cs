@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SisMVC.Models;
+using SisMVC.Data;
 
 namespace SisMVC
 {
@@ -39,6 +40,7 @@ namespace SisMVC
             services.AddDbContext<SisMVCContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("SisMVCContext"), builder =>
                         builder.MigrationsAssembly("SisMVC")));
+            services.AddScoped<SeedingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
