@@ -13,6 +13,7 @@ namespace SisMVC.Models
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
+        public int DepartmentId { get; set; }
         public ICollection<SisRecord> Sis { get; set; } = new List<SisRecord>();
 
         public Seller()

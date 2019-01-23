@@ -22,6 +22,7 @@ namespace SisMVC.Services
 
         public void Insert(Seller obj)
         {
+            
             _context.Add(obj);
             _context.SaveChanges();
         }
