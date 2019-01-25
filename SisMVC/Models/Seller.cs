@@ -30,8 +30,9 @@ namespace SisMVC.Models
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double BaseSalary { get; set; }
 
-        [Required(ErrorMessage = "{0} Required")]
+        
         public Department Department { get; set; }
+        [Required(ErrorMessage = "{0} Required")]
         [Display(Name = "Departamento")]
         public int DepartmentId { get; set; }
 
